@@ -155,9 +155,7 @@ class BST {
 
         if (root.val <= min || root.val >= max) return false;
 
-        return this.isBST(root.left, min, root.value) &&
-            this.isBST(root.right, root.value, max)
-
+        return this.isBST(root.left, min, root.value) && this.isBST(root.right, root.value, max)
     }
 
     same(p, q) {

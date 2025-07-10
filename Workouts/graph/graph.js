@@ -111,16 +111,14 @@ class Graph {
                     return true;
                 }
             }
-
             return false;
         };
-
+        
         for (let vertex in this.adjList) {
             if (!visited.has(vertex)) {
                 if (dfs(vertex, null)) return true;
             }
         }
-
         return false;
     }
 
@@ -154,3 +152,19 @@ class Graph {
         return clonedGraph;
     }
 }
+
+
+
+
+
+const g = new Graph();
+
+g.addEdge('A', 'B');
+g.addEdge('E', 'D');
+g.addEdge('F', 'B');
+g.addEdge('A', 'D');
+g.addEdge('A', 'C');
+g.addEdge('E', 'C');
+
+
+g.printGraph()
